@@ -1,0 +1,50 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-intl": "2.9.0",
+    "react-scripts": "3.4.0",
+    "terra-abstract-modal": "^3.22.0",
+    "terra-aggregate-translations": "^1.6.0",
+    "terra-application": "^1.17.0",
+    "terra-application-navigation": "^1.23.0",
+    "terra-base": "^5.30.0",
+    "terra-button": "^3.33.0",
+    "terra-collapsible-menu-view": "^6.29.0",
+    "terra-menu": "^6.29.0"
+  },
+  "scripts": {
+    "aggregate-translations": "tt-aggregate-translations -b ./ -d ./src/**/translations -d ./translations -l ['en'] -o ./node_modules/terra-i18n/node_modules -f es6",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "prestart": "npm run aggregate-translations",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "browserslist-config-terra": "^2.0.0",
+    "terra-core": "0.0.1"
+  }
+}
